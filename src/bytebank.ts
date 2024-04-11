@@ -1,4 +1,5 @@
 let saldo = 3000;
+alert("nova frase");
 
 const elementoSaldo = document.querySelector(
   ".saldo-valor .valor"
