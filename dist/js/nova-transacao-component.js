@@ -11,11 +11,11 @@ elementoFormulario.addEventListener("submit", function (e) {
     let tipoTransacao = inputTipoTransacao.value;
     let valor = inputValor.valueAsNumber;
     let data = new Date(inputData.value);
-    if (tipoTransacao == "Depósito") {
+    if (tipoTransacao == TipoTransacao.DEPOSITO) {
         saldo += valor;
     }
-    else if (tipoTransacao == "Transferência" ||
-        tipoTransacao == "Pagamento de Boleto") {
+    else if (tipoTransacao == TipoTransacao.PAGAMENTO_BOLETO ||
+        tipoTransacao == TipoTransacao.TRANSFERENCIA) {
         saldo -= valor;
     }
     else {
